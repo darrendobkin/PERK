@@ -1,0 +1,87 @@
+﻿@model IEnumerable<PERK.Models.Case>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DateReviewed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Reviewer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CRNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SANEBarcode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Clearance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CaseDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VictimLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VictimFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VictimMiddleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resealed)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateReviewed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Reviewer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CRNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SANEBarcode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Clearance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CaseDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VictimLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VictimFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VictimMiddleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resealed)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
