@@ -13,7 +13,7 @@ namespace PERK.DAL
         public DbSet<Case> Cases { get; set; }
         public DbSet<EvidenceItem> EvidenceItems { get; set; }
         public DbSet<EvidenceReview> EvidenceReviews { get; set; }
-
+        public DbSet<CaseReviewStatusCode> CaseReviewStatusCodes { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();

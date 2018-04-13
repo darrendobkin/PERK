@@ -154,7 +154,22 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801181648270_InitialCreate.cs" />
+    <Compile Include="Migrations\201801181648270_InitialCreate.Designer.cs">
+      <DependentUpon>201801181648270_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801182130012_CaseReviewStatusCode.cs" />
+    <Compile Include="Migrations\201801182130012_CaseReviewStatusCode.Designer.cs">
+      <DependentUpon>201801182130012_CaseReviewStatusCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801182137507_FiveStatusCodes.cs" />
+    <Compile Include="Migrations\201801182137507_FiveStatusCodes.Designer.cs">
+      <DependentUpon>201801182137507_FiveStatusCodes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Case.cs" />
+    <Compile Include="Models\CaseReview.cs" />
+    <Compile Include="Models\CaseReviewStatusCode.cs" />
     <Compile Include="Models\EvidenceItem.cs" />
     <Compile Include="Models\EvidenceReview.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -219,6 +234,17 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201801181648270_InitialCreate.resx">
+      <DependentUpon>201801181648270_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801182130012_CaseReviewStatusCode.resx">
+      <DependentUpon>201801182130012_CaseReviewStatusCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801182137507_FiveStatusCodes.resx">
+      <DependentUpon>201801182137507_FiveStatusCodes.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

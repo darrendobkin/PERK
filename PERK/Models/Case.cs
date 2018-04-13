@@ -8,6 +8,7 @@ namespace PERK.Models
     public class Case
     {
         public int ID { get; set; }
+        public CaseReviewStatusCode Status { get; set; }
         public DateTime DateReviewed { get; set; }
         public String Reviewer { get; set; }
         public String CRNumber { get; set; }
